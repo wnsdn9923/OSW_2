@@ -7,5 +7,32 @@
 
 <body>
   <h1>영어 단어장</h1>
+  <form>
+    <div>
+      <label for="english">영어 단어 입력:</label>
+      <input id="english" type="text" required>
+    </div>
+    <div>
+      <label for="korean">한국어 의미 입력:</label>
+      <input id="korean" type="text" required>
+    </div>
+    <button type="button" id="add-button">Create</button>
+  </form>
+  <div>
+    <input type="text" id="search-input" placeholder="검색어 입력">
+  </div>
+  <ul id="card">
+    <li>
+      <div>
+        <input class="card-title" value="Hello" disabled>
+        <input class="card-text" value="안녕하세요" disabled>
+      </div>
+      <div>
+        <button class="edit">edit</button>
+        <button class="update">update</button>
+        <button class="delete">delete</button>
+      </div>
+    </li>
+  </ul>
 </body>
 </html>
