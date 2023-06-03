@@ -20,3 +20,20 @@ var newWords = {
       document.getElementById("korean").value = "";
     }
   }
+
+  function searchWord() {
+    var input = document.getElementById('search-input').value.toLowerCase();
+    var cards = document.querySelectorAll('#card li');
+
+    for (var i = 0; i < cards.length; i++) {
+      var korean = cards[i].querySelector('.card-title').value.toLowerCase();
+      var english = cards[i].querySelector('.card-text').value.toLowerCase();
+      var card = cards[i];
+
+      if (korean.includes(input) || english.includes(input)) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    }
+  }
