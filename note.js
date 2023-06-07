@@ -37,3 +37,19 @@ var newWords = {
       }
     }
   }
+  document.getElementById('card').addEventListener('click', function (e) {
+    var tgt = e.target;
+    var parent = tgt.closest('li');
+    var english = parent.querySelector(".card-title");
+    var korean = parent.querySelector(".card-text");
+
+    if (tgt.classList.contains('delete'))
+      parent.remove();
+    else if (tgt.classList.contains('edit')) {
+      english.removeAttribute('disabled');
+      korean.removeAttribute('disabled');
+    } else if (tgt.classList.contains('update')) {
+      english.setAttribute("disabled", 'disabled');
+      korean.setAttribute("disabled", 'disabled');
+    }
+  });
